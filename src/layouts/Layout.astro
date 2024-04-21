@@ -2,51 +2,47 @@
 interface Props {
 	title: string;
 }
-import "../styles/Layout.css";
 const { title } = Astro.props;
+import '@fontsource/blinker/100.css';
+import '@fontsource/blinker/200.css';
+import '@fontsource/blinker/300.css';
+import '@fontsource/blinker/400.css';
+import '@fontsource/blinker/600.css';
+import '@fontsource/blinker/700.css';
+import '@fontsource/blinker/800.css';
+import '@fontsource/blinker/900.css';
 ---
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    
-    
-
     <meta charset="UTF-8">
-    <!-- Enlaces a hojas de estilo y fuentes externas -->
     <meta
 		name="description"
 		content="Descubre el encanto del Huila con la mejor plataforma de turismo. Descarga gratis nuestra app de turismo y sumérgete en guías, recomendaciones y emocionantes actividades."
 	>
-    <!-- Ícono de la página web -->
     <link rel="icon" href="IsotipoPalH.svg" type="image/x-icon" />
-    
-    <!-- Configuraciones de codificación y vista del documento -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
     />
-
- <!-- Título de la página con el valor de la variable "title" de Astro.props -->
   <title>Pal'Huila - {title}</title>
-
-
   </head>
   <body>
-    <!-- Contenido principal del sitio -->
     <main class="flex-grow">
       <slot/>
     </main>
-    <!-- Enlaces a scripts externos -->
-  
-    
-
-    
-
   </body>
-
-  
 </html>
+
+<style is:global>
+:root{
+
+
+}
+
+html{
+     font-family: 'Blinker', sans-serif;
+     scroll-behavior: smooth;
+}
+</style>
